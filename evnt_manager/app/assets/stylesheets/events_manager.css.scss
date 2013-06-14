@@ -1,0 +1,278 @@
+// Place all the styles related to the events_manager controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Layout css
+#top_nav_bar{
+background-color:#262626;
+width:100%;
+height:80px;
+position:fixed;
+top:0px;
+min-width:964px;
+}
+
+
+#top_nav_bar a
+{
+ font-family:verdana;
+ text-decoration:none;
+ color:#EDEDED;
+} 
+#top_nav_bar a:hover 
+{
+ color:#BDBDBD;
+}
+#footer{
+background-color:#262626;
+width:100%;
+height:40px;
+position:fixed;
+bottom:0px;
+min-width:964px;
+}
+#footer p
+{
+text-align: center;
+color: #FFFFFF;
+}
+ 
+.project_title{
+color:#EDEDED;
+font-family:verdana;
+font-size:40px;
+width:350px;
+margin-top:6px;
+margin-left:50px;
+font-weight:bold;
+float:left;
+}
+
+
+.login_button{
+-webkit-box-shadow:rgba(255,255,255,0.3) 0 1px 0 0;
+-moz-box-shadow:rgba(255,255,255,0.3) 0 1px 0 0;
+box-shadow:rgba(255,255,255,0.3) 0 1px 0 0;
+border-bottom-color:rgba(255,255,255,0.3);
+border:1px solid rgba(255,255,255,0.3);
+background-color:#555;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+color:#D8D8D8 ;
+font-family:'Verdana',Arial,sans-serif;
+font-size:14px;
+text-shadow:#b2e2f5 0 1px 0;
+padding:5px
+
+}
+
+.login_textstyle{
+background: white;
+border: 1px solid #DDD;
+border-radius: 5px;
+box-shadow: 0 0 5px #DDD inset;
+color: #666;
+float: left;
+padding: 5px 10px;
+width: 165px;
+outline: none;
+height:20px;
+}
+
+#notice {
+color: white;
+font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+//sign up  css
+
+#signup-wrapper{
+margin-top:100px;
+margin-left: auto;
+margin-right: auto;
+height:180px;
+width:924px;
+padding:20px;
+border-radius:15px;
+background: #e1e1e1; /* Fallback color for non-css3 browsers */
+/* Gradients */
+background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+/* Rounded Corners */
+border-radius: 17px; 
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+/* Shadows */
+box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3); 
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+
+
+#index  events listing
+#wrapper {
+width: 90%;
+max-width: 1100px;
+min-width: 800px;
+margin: 50px auto;
+margin-top:100px;
+	
+}
+
+#columns {
+-webkit-column-count: 3;
+-webkit-column-gap: 10px;
+-webkit-column-fill: auto;
+-moz-column-count: 3;
+-moz-column-gap: 10px;
+-moz-column-fill: auto;
+column-count: 3;
+column-gap: 15px;
+column-fill: auto;
+}
+
+.pin {
+display: inline-block;
+background: #FEFEFE;
+border: 2px solid #FAFAFA;
+box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+margin: 0 2px 15px;
+-webkit-column-break-inside: avoid;
+-moz-column-break-inside: avoid;
+column-break-inside: avoid;
+padding: 15px;
+padding-bottom: 5px;
+background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+opacity: 1;
+-webkit-transition: all .2s ease;
+-moz-transition: all .2s ease;
+-o-transition: all .2s ease;
+transition: all .2s ease;
+}
+
+.pin img {
+width: 100%;
+border-bottom: 1px solid #ccc;
+padding-bottom: 15px;
+margin-bottom: 5px;
+}
+
+.pin p {
+font: 12px/18px Arial, sans-serif;
+color: #333;
+margin: 0;
+}
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+#columns:hover .pin:not(:hover) {
+	opacity: 0.4;
+}
+
+#home-page-wrapper {
+  margin-top:100px;
+  width:964px;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  
+}
+
+#home-listing 
+{
+font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+font-weight:bold;
+font-size:20px;
+}
+
+
+//event details  css
+#event-profile-wrapper {
+margin-top:100px;
+width:964px;
+height:auto;
+margin-left: auto;
+margin-right: auto;
+background: white; 
+}
+
+
+
+#event-details-box
+{
+margin-top:30px;
+height:180px;
+width:924px;
+padding:20px;
+border-radius:15px;
+background: #e1e1e1; /* Fallback color for non-css3 browsers */
+/* Gradients */
+background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+/* Rounded Corners */
+border-radius: 17px; 
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+/* Shadows */
+box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3); 
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+
+#event-users-box
+{
+margin-top:30px;
+height:700px;
+width:924px;
+padding:20px;
+border-radius:15px;
+background: #e1e1e1; /* Fallback color for non-css3 browsers */
+/* Gradients */
+background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+/* Rounded Corners */
+border-radius: 17px; 
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+/* Shadows */
+box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3); 
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+#profile-pic-box {
+height: 170px;
+float:left;
+width: 170px;
+min-width: 170px;
+z-index: 1;
+}
+
+#event-details{
+height: auto;
+float:right;
+width: 695px;
+min-width: 695px;
+}
+
+
+
+

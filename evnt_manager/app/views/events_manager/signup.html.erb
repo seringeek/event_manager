@@ -1,0 +1,31 @@
+<div id='signup-wrapper'>
+	<%= form_tag("/events_manager/signup_create", :method => 'post') do %>
+		<table align=center>
+  			<tr>
+   				 <td>Name</td>
+    			 <td><%= text_field_tag(:name, '' ,class:"login_textstyle")%>
+    			 <span  class='error_td'><%=@user.errors[:name][0] %></span></td></td>    			
+            </tr>
+            <tr>
+                 <td>email</td>
+                 <td><%= text_field_tag(:email, '' ,class:"login_textstyle")%>
+                 <span  class='error_td'><%=@user.errors[:email][0] %></span></td>
+            </tr>
+            <tr>
+                 <td>password</td>
+                 <td><%= password_field_tag(:password, '' ,class:"login_textstyle")%>
+                 <span  class='error_td'><%=@user.errors[:password][0] %></span></td>
+            </tr>
+            <tr>
+                 <td></td>
+        	     <td><label style='font-weight:bold;' >Male</label> <%= radio_button_tag 'gender','M'%>
+                 <label style='font-weight:bold;' >Female</label> <%=  radio_button_tag 'gender', 'F'%>
+                 <span  class='error_td'><%=@user.errors[:gender][0] %></span></td>	
+            </tr>
+            <tr>
+                 <td></td>
+                 <td><%= submit_tag("Sign up", class:"login_button")%></td>
+            </tr>
+        </table>
+    <%end%>
+</div>

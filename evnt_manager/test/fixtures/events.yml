@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  event_date: 2013-06-10
+  short_desc: MyString
+  about: MyText
+  photo: MyString
+  ticket_fee: 9.99
+  created_from: MyString
+
+two:
+  name: MyString
+  event_date: 2013-06-10
+  short_desc: MyString
+  about: MyText
+  photo: MyString
+  ticket_fee: 9.99
+  created_from: MyString

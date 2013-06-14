@@ -1,0 +1,54 @@
+<div id='event-profile-wrapper'>
+     <div id='event-details-box'>
+         <div id='profile-pic-box'>
+             <img  width='170' height='170'src="/assets/event_photos/<%=@event_details[0].photo%>" /></td>
+          </div>
+          <div id='event-details'>
+            <table> 
+              <h1 align='center'> <%=@event_details[0].name%> on <%=@event_details[0].event_date%></h1>
+               <tr> 
+                  <td>
+                       <label>Ticket Fee: <%=@ticket_fee%></label>
+                  </td>    
+               </tr>
+               <tr>
+                   <td>
+                       <%if @date_check==true%>
+                          <%if @attend_flag=='A'%>
+                            <label>Attending</label>
+                            <input type="button"  value='Un Attend' onclick="window.location='/event_profile/<%=@event_details[0].id%>?attend=N';">
+                          <%else%>
+                             <label>Not Attending</label>
+                             <input type="button"  value='Attend' onclick="window.location='/event_profile/<%=@event_details[0].id%>?attend=Y';">
+                          <%end%>  
+                       <%end%>  
+                   </td>
+               </tr>       
+             </table> 
+         </div>
+     </div>
+     <div id='event-users-box'>
+        <table align='left'>
+           <h1 align=center'>Event Participants</h1>
+             <%if @event_participants.blank?%>
+                <tr>
+                    <td> 
+                       <label>No Participants</label>
+                    </td>
+                </tr>
+             <%else%>
+                <%@event_participants.each do |participant| %>
+                  <tr>
+                    <td> 
+                       <label>Name:<%=participant.name%></label>
+                    </td>
+                    <td> 
+                       <label>Gender:<%=participant.gender%></label>
+                    </td>
+                 </tr>
+               <%end%>
+            <%end%>  
+        </table> 
+     </div>
+</div> 
+ 

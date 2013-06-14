@@ -1,0 +1,25 @@
+<div id='home-page-wrapper'>
+	<div id="wrapper">
+		<div id="columns">
+			<%@all_events.each do |events|%>
+				<a href='/event_profile/<%=events.id%>'>
+				<div class="pin">
+					<img src="/assets/event_photos/<%=events.photo%>" />
+					<p align='center'>
+						<label id='home-listing' ><%=events.name%></label>
+					</p>
+					<p>
+						<label> About:<%=events.about%></label>
+					</p>
+					<p>
+						<label>Ticket fee:<%=events.ticket_fee%></label>
+					</p>
+					<p>
+						<label>Event Date:<%=events.event_date%></label>
+					</p>
+				</div></a>
+			<%end%>	
+		</div>
+	</div>
+</div>
+ 

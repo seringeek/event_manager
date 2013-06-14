@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EvntManager</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="top_nav_bar">
+      <table align='left'>
+         <tr>
+            <td>
+                <a href='/events_manager/index' ><label class='project_title'">Event Manager</span></a>
+            </td>
+        </tr>
+      </table>
+      <table align='right' width='540' style='margin-top:15px;'>
+        <tr>    
+          <% if current_user %>
+            <td>
+                 <label style="color:white;"> Welcome <%= current_user.name %></label></br>
+                <a href="/session/destroy" style="color:white;">Logout</a>
+            </td>
+          <% else %>
+            <td>                  
+                <%= form_tag("/session/create", :method => 'post') do %>
+                <%= text_field_tag(:name,'',class:"login_textstyle",placeholder:"Name")%> &nbsp;
+                <%= password_field_tag(:password,'',class:"login_textstyle",placeholder:"Password")%>&nbsp;
+                <%= submit_tag("login", class:"login_button")%>
+                <input type="button" value='Sign Up' class="login_button" onclick="location.href='/user/signup';">
+                <%end%> 
+                <label id='notice'><%=notice%></label>
+            </td>
+           <%end%>
+        </tr>  
+      </table>      
+  </div>
+
+      <%= yield %>
+  <div id='footer'>
+     <p>Copyright protected</p>
+  </div>
+</body>
+</html>
